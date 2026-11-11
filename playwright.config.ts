@@ -14,7 +14,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: process.env.CI ? [['html'], ['github']] : 'html',
   use: {
-    baseURL: process.env.BASE_URL ?? 'https://demo.playwright.dev/todomvc',
+    baseURL: process.env.BASE_URL ?? 'https://demo.playwright.dev/todomvc/',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
   },

@@ -28,7 +28,7 @@ export class TodoPage {
   }
 
   async goto() {
-    await this.page.goto('/');
+    await this.page.goto('./'); // relative to baseURL, which carries the /todomvc/ path
   }
 
   async addTodo(text: string) {
