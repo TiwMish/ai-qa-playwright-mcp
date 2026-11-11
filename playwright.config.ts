@@ -1,7 +1,8 @@
 import { defineConfig, devices } from '@playwright/test';
 
 /**
- * The demo app under test is Playwright's public TodoMVC instance —
+ * The demo app under test is Playwright's public TodoMVC instance
+ * (override with BASE_URL to run against a local/staging deployment) —
  * a stable, realistic single-page app (add / complete / filter / edit /
  * delete / persistence) that makes the suite runnable by anyone.
  */
@@ -13,7 +14,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: process.env.CI ? [['html'], ['github']] : 'html',
   use: {
-    baseURL: 'https://demo.playwright.dev/todomvc',
+    baseURL: process.env.BASE_URL ?? 'https://demo.playwright.dev/todomvc',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
   },
