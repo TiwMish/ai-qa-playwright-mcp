@@ -1,0 +1,19 @@
+{
+  "name": "ai-qa-playwright-mcp",
+  "version": "1.0.0",
+  "description": "AI-assisted QA automation with Playwright, MCP (Model Context Protocol) and GitHub Copilot — agent-driven test design, self-healing locators and AI failure triage.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen https://demo.playwright.dev/todomvc"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}
